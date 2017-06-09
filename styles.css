@@ -172,6 +172,8 @@ h3 {
   .masthead,
   .mastfoot,
   .cover-container {
+    height: 250px;
+    overflow: scroll;
     width: 700px;
   }
 }
