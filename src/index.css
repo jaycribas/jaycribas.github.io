@@ -45,5 +45,26 @@ svg {
 }
 
 a {
-  color: inherit;
+  color: #636363;
+}
+
+a:hover {
+  color: #0075ff
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  .profile-image {
+    width: auto;
+  }
 }
