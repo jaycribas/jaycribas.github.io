@@ -44,7 +44,7 @@ svg {
   margin-right: .5em;
 }
 
-a {
+a, .fa-spinner {
   color: #636363;
 }
 

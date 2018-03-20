@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Header extends Component {
-  render() {
-    return (
-      <nav>
-        JAY CRIBAS
-      </nav>
-    )
-  }
+const Header = ({name}) => {
+  return (
+    <nav>
+      {name.toUpperCase()}
+    </nav>
+  )
 }
+
+export default Header

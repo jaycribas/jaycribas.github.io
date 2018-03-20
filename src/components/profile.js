@@ -1,28 +1,28 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({user}) => {
   return (
     <div className="profile-details">
-      <p>Software Engineer | Graphic Designer</p>
-      <p className="name-lrg">JAY CRIBAS</p>
-      <p className="blurb">Software engineer with a graphic design background. JavaScript developer in Node.js, React, Redux, SQL databases, and API integration.</p>
+      <p>{user.title}</p>
+      <p className="name-lrg">{user.name.toUpperCase()}</p>
+      <p className="blurb">{user.bio}</p>
       <div className="social-links">
-        <a href="https://www.linkedin.com/in/jaycribas/"
+        <a href={user.linkedin_url}
            target="_blank"
            rel="noopener noreferrer">
           <i className="fab fa-linkedin fa-2x" />
         </a>
-        <a href="https://github.com/jaycribas"
+        <a href={user.github_url}
            target="_blank"
            rel="noopener noreferrer">
           <i className="fab fa-github fa-2x" />
         </a>
-        <a href="https://twitter.com/jaycribas"
+        <a href={user.twitter_url}
            target="_blank"
            rel="noopener noreferrer">
           <i className="fab fa-twitter fa-2x" />
         </a>
-        <a href="/jay_cribas_resume.pdf"
+        <a href={user.resume_url}
            target="_blank"
            rel="noopener noreferrer"
            download>
