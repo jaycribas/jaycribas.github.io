@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Header = ({name}) => {
-  return (
-    <nav>
-      {name.toUpperCase()}
-    </nav>
-  )
-}
+const Header = ({ name }) => (
+  <nav>
+    {name.toUpperCase()}
+  </nav>
+);
 
-export default Header
+export default Header;
