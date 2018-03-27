@@ -1,0 +1,8 @@
+.resume-button {
+  width: 100%;
+  height: 2rem;
+}
+
+.mui-btn+.mui-btn {
+  margin-left: 0;
+}

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import Airtable from 'airtable';
 import Header from './Header';
 import Image from './Image';
 import Profile from './Profile';
-import Airtable from 'airtable';
+import Resume from './Resume';
+
+require('dotenv').config();
 
 class App extends Component {
   constructor(props) {
@@ -21,8 +24,9 @@ class App extends Component {
   }
 
   getUserData() {
-    const base = new Airtable({ apiKey: 'keyBYNrYN374Kxn11' })
-      .base('appnxPTF9NYkjSa73');
+    const base = new Airtable({
+      apiKey: process.env.REACT_APP_AIRTABLE_API_KEY,
+    }).base('appnxPTF9NYkjSa73');
 
     base('bio_data').find('recpNoWt3h1UJkduz', (err, record) => {
       if (err) { console.error(err); return; }
@@ -45,6 +49,7 @@ class App extends Component {
         <Header name={user.name} />
         <Image imgUrl={user.profile_img_url} />
         <Profile user={user} />
+        <Resume />
       </div>
     );
   }

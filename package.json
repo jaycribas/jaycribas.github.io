@@ -5,6 +5,7 @@
   "dependencies": {
     "airtable": "^0.5.2",
     "dotenv": "^5.0.1",
+    "muicss": "^0.9.38",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
